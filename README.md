@@ -11,7 +11,7 @@ Features
 --------
 
 * Not specific to certain cell line/tissue
-* Effective and efficient to map back-splicing junction reads
+* Effective and efficient to circRNA-derived pseudogene detection
 
 Usage: perl CIRCpseudo.pl [options]
 -----
@@ -70,7 +70,7 @@ Requirements
 Citation
 --------
 
-**[Dong R, Zhang XO, Zhang Y, Ma XK, Chen LL# and Yang L#. CircRNA-derived pseudogenes. Cell Res, 2016**
+**Dong R, Zhang XO, Zhang Y, Ma XK, Chen LL and Yang L. CircRNA-derived pseudogenes. Cell Res, 2016**
 
 License
 -------
