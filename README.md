@@ -11,7 +11,7 @@ Features
 --------
 
 * Not specific to certain cell line/tissue
-* Effective and efficient to circRNA-derived pseudogene detection
+* Effective and efficient to circRNA-derived pseudogenes detection
 
 Usage: perl CIRCpseudo.pl [options]
 -----
@@ -76,5 +76,5 @@ License
 -------
 
 Copyright (C) 2016 YangLab.
-See the [LICENSE](https://github.com/YangLab/CIRCpseudo/master/LICENSE)
+See the [LICENSE](https://github.com/YangLab/CIRCpseudo/blob/master/LICENSE)
 file for license rights and limitations (MIT).
