@@ -10,9 +10,8 @@ A schematic flow shows the pipeline
 Features
 --------
 
-* Not specific to certain cell line/tissue/species
-* Not specific to certain RNA-seq technology (length/sequencing platform)
-* Effective and efficient to map junction reads
+* Not specific to certain cell line/tissue
+* Effective and efficient to map back-splicing junction reads
 
 Usage: perl CIRCpseudo.pl [options]
 -----
@@ -20,8 +19,8 @@ Usage: perl CIRCpseudo.pl [options]
 ```bash
 Required:
         --circ          CircRNA file (CIRCexplorer format)
-        --ref           Reference annotation file (refFlat format)
-        --genome        Reference genome file (fa format)
+        --ref           Reference annotation file (refFlat file)
+        --genome        Reference genome file (fasta format)
         --bwaidx        Bwa index of reference genome
         --output        Output file
 Optional:
@@ -30,11 +29,34 @@ Optional:
 ```
 *Please add the CIRCpseudo directory to your $PATH first.
 
+###Example
+```bash
+CIRCpseudo.pl -circ circRNA.bed -ref mm10_refFlat.txt -genome mm10.fa -bwaidx index/mm10.fa -output mouse_pseudo.txt
+```
+###Note
+
+* ref.txt is in the format ([Gene Predictions and RefSeq Genes with Gene Names](https://genome.ucsc.edu/FAQ/FAQformat.html#format9)) below (see details in [the example file](https://github.com/YangLab/CIRCexplorer/blob/master/example/ref_example.txt))
+
+| Field       | Description                   |
+| :---------: | :---------------------------- |
+| geneName    | Name of gene                  |
+| isoformName | Name of isoform               |
+| chrom       | Reference sequence            |
+| strand      | + or - for strand             |
+| txStart     | Transcription start position  |
+| txEnd       | Transcription end position    |
+| cdsStart    | Coding region start           |
+| cdsEnd      | Coding region end             |
+| exonCount   | Number of exons               |
+| exonStarts  | Exon start positions          |
+| exonEnds    | Exon end positions            |
+
+* mm10.fa is genome sequence in FASTA format.
 
 Results
 -------
 
-You should get result file by --output.
+You should get result file by --output. Output file will report Host gene location, Host gene name, Fusion sequence, Pseudogene location and Mismatches.
 
 Requirements
 ------------
