@@ -6,7 +6,7 @@ after maual check you could do further characterizations for them.
 
 A schematic flow shows the pipeline
 -----------------------------------
-
+![pipeline](https://raw.githubusercontent.com/dongruipicb/CIRCpseudo/master/circpseudo.jpg)
 Features
 --------
 
