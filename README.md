@@ -10,8 +10,8 @@ A schematic flow shows the pipeline
 Features
 --------
 
-* Not specific to certain cell line/tissue
-* Effective and efficient to circRNA-derived pseudogenes detection
+* Not specific to certain species
+* Aim to circRNA-derived pseudogenes detection
 
 Usage: perl CIRCpseudo.pl [options]
 -----
