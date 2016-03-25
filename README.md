@@ -31,7 +31,7 @@ Optional:
 
 ###Example
 ```bash
-CIRCpseudo.pl -circ circRNA.bed -ref mm10_refFlat.txt -genome mm10.fa -bwaidx index/mm10.fa -output mouse_pseudo.txt
+CIRCpseudo.pl -circ circRNA.bed -ref mm10_refFlat.txt -genome mm10.fa -bwaidx index/mm10.fa.idx -output mouse_pseudo.txt
 ```
 ###Note
 
