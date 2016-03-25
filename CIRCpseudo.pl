@@ -18,11 +18,12 @@ CIRCpseudo.pl 1.0 -- circRNA-derived pseudogene analysis tool
 Usage: perl $0 [options]
 
 Required:
-	--circ 		CircRNA file (CIRCexplorer format)
-	--ref 		Reference file (refFlat format)
-	--genome 	Genome file (fa format)
-	--bwaidx 	bwa index of reference genome
-	--output 	output file
+	--circ          CircRNA file (CIRCexplorer format)
+        --ref           Reference annotation file (refFlat format)
+        --genome        Reference genome file (fa format)
+        --bwaidx        Bwa index of reference genome
+        --output        Output file
+
 Optional:
 	--mismatch	max mismaches between fusion sequences and genome, defalt 4
 	--fusionlen	fusion lenth of back-splice exon-exon junctions defalt 40
@@ -128,7 +129,7 @@ print "Done\n";
 print "Bowtie and BWA mapping\n";
 `bowtie temp/temp_linear_splice.fa -f temp/temp_back_splice.fa -p 5 -m 1 -v 2 -S temp/map2linear.sam --un temp/unmap2linear.fa &>temp/temp_log`;
 `bowtie temp/temp_exon_intron.fa -f temp/unmap2linear.fa -p 5 -m 1 -v 2 -S temp/map2ei.sam --un temp/unmap2ei.fa &>>temp/temp_log`;
-`bwa aln -n $mismatch -t 25 -f temp/map2genome.sai $bwaidx temp/unmap2ei.fa &>>temp/temp_log`;
+`bwa aln -n $mismatch -t 5 -f temp/map2genome.sai $bwaidx temp/unmap2ei.fa &>>temp/temp_log`;
 `bwa samse $bwaidx temp/map2genome.sai temp/unmap2ei.fa 1>temp/map2genome_bwa.sam 2>temp/temp_log`;
 print "Done\n";
 
