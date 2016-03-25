@@ -18,9 +18,9 @@ Usage: perl CIRCpseudo.pl [options]
 
 ```bash
 Required:
-        --circ          CircRNA file (CIRCexplorer format)
-        --ref           Reference annotation file (refFlat file)
-        --genome        Reference genome file (fasta format)
+        --circ          CircRNA file (CIRCexplorer format file)
+        --ref           Reference annotation file (refFlat format file)
+        --genome        Reference genome file (Fasta format file)
         --bwaidx        Bwa index of reference genome
         --output        Output file
 Optional:
@@ -31,7 +31,7 @@ Optional:
 
 ###Example
 ```bash
-CIRCpseudo.pl -circ circRNA.bed -ref mm10_refFlat.txt -genome mm10.fa -bwaidx index/mm10.fa.idx -output mouse_pseudo.txt
+CIRCpseudo.pl -circ circRNA.bed -ref mm10_ref.txt -genome mm10.fa -bwaidx index/mm10.fa.idx -output mouse_pseudo.txt
 ```
 ###Note
 
