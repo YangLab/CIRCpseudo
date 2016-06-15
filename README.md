@@ -61,7 +61,7 @@ You should get result file by --output. Output file will report Host gene locati
 Requirements
 ------------
 
-* CircRNA file in CIRCexplorer format
+* CircRNA file in [CIRCexplorer format](https://github.com/YangLab/CIRCexplorer#output)
 * [Perl] (https://www.perl.org/) v5.14.1
 * [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml) v0.12.9
 * [BWA](http://bio-bwa.sourceforge.net/) v0.6.2
