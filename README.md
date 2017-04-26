@@ -29,11 +29,11 @@ Optional:
 ```
 *Please add the CIRCpseudo directory to your $PATH first.
 
-###Example
+### Example
 ```bash
 CIRCpseudo.pl -circ circRNA.bed -ref mm10_ref.txt -genome mm10.fa -bwaidx index/mm10.fa.idx -output mouse_pseudo.txt
 ```
-###Note
+### Note
 
 * ref.txt is in the format ([Gene Predictions and RefSeq Genes with Gene Names](https://genome.ucsc.edu/FAQ/FAQformat.html#format9)) below (see details in [the example file](https://github.com/YangLab/CIRCexplorer/blob/master/example/ref_example.txt))
 
@@ -62,7 +62,7 @@ Requirements
 ------------
 
 * CircRNA file in [CIRCexplorer format](https://github.com/YangLab/CIRCexplorer#output)
-* [Perl] (https://www.perl.org/) v5.14.1
+* [Perl](https://www.perl.org/) v5.14.1
 * [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml) v0.12.9
 * [BWA](http://bio-bwa.sourceforge.net/) v0.6.2
 * [bedtools](https://github.com/arq5x/bedtools2) v2.19.0
